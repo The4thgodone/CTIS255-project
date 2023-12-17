@@ -5,7 +5,7 @@ body{
     display: flex;
     flex-direction: row;
     max-width: 100vw;
-    font-size: 36px;
+    font-size: 14px;
 }
 
 div .photo {
@@ -21,7 +21,7 @@ div .photo {
     border-radius: 100%;
 }
 
-.left{
+.left {
     display: flex;
     flex: 3;
     flex-direction: column;
@@ -61,8 +61,8 @@ div .photo {
     font-size: 42px
 }
 
-.title-newList{
-    margin-top: 77vh;
+.title-newList {
+    margin-top: 10vh; /* Adjust as needed */
     display: flex;
     flex-direction: row;
     gap: 50px;
@@ -138,4 +138,11 @@ div .photo {
     justify-content: center;
     align-items: left;
     gap: 10px;
+}
+
+@media (max-width: 600px) {
+    /* Styles for smaller screens */
+    body {
+        font-size: 2vw;
+    }
 }
