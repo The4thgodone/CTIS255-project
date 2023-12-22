@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Task List</title>
     <link rel="stylesheet" href="style.css">
+    <script src="/jquery-3.7.1.js"></script>
+    <script src="imdat.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <!--Task Bar-->
@@ -22,7 +25,7 @@
             </div>
             <div class="tab-projectMembers">
                 <div class="star">
-                    <img src="star-regular.svg" alt="">
+                    <i class="fa-regular fa-star"></i>
                 </div>
                 <div class="projectMembers-text">
                     <p>Project Members</p>
@@ -31,12 +34,15 @@
         </div>
         <div class="left-bottom">
         <!--EKLENEN TASK LISTLER BURADA GÖSTERİLECEK-->
+            <ul class="taskLists">
+                
+            </ul>
         </div>
         <!--New List Bar-->
         <div class="newList">
             <div class="title-newList">
-                <img src="plus-solid.svg" alt="">
-                <button type="button">New List</button>
+                <i class="fa-solid fa-plus"></i>
+                <p>New List</p>
             </div>
         </div>
     </div>
@@ -44,7 +50,7 @@
     <div id="projectMembers">
         <div class="right-top">
             <div class="title-projectMembers">
-                <img src="star-regular.svg" alt="">
+                <i class="fa-regular fa-star"></i>
                 <p>Project Members</p>
             </div>
         </div>
@@ -80,6 +86,12 @@
                     <p>22002108</p>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="prompt-box-container">
+        <div class="input-container">
+            <label for="prompt-newList">Enter a new to-do list!</label>
+            <input type="text" name="prompt-newList" id="prompt-newList">
         </div>
     </div>
 </body>
