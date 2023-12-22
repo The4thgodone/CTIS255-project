@@ -1,5 +1,34 @@
 *{margin: 0; padding: 0}
 
+.prompt-box-container {
+    background-color: #999;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    position: fixed;
+    display: none;
+}
+
+.input-container{
+    background-color: #FFF; 
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    gap: 20px;
+    height:fit-content;
+    width: fit-content;
+    padding: 30px;
+}
+
+.input-container label {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: left;
+    margin-bottom: 10px;
+}
+
+
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
@@ -27,6 +56,7 @@ div .photo {
     flex-direction: column;
     border: 1px solid black;
     min-height: 90vh;
+    position: relative;
 }
 
 
@@ -34,21 +64,29 @@ div .photo {
 .left-profile {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 15px;
     justify-content: left;
     align-items: center;
     border: 1px solid black;
     min-height: 10vh;
 }
 
+
+
 .tab-projectMembers{
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 2rem;
     justify-content: left;
     align-items: center;
-    border: 1px solid black;
+    border: 1px dashed black;
     min-height: 4vh;
+    border-bottom: 3px solid black;
+}
+
+.tab-projectMembers:hover{
+    background-color: #999;
+    cursor: grab;
 }
 
 .star img{
@@ -58,11 +96,22 @@ div .photo {
 }
 
 .projectMembers-text p {
-    font-size: 42px
+    font-size: 1.5rem;
 }
 
+.newList{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    /* padding-right: 50px; */
+}
+
+.newList:hover{
+    background-color: #999;
+    cursor:grab;
+}
 .title-newList {
-    margin-top: 10vh; /* Adjust as needed */
     display: flex;
     flex-direction: row;
     gap: 50px;
@@ -78,10 +127,10 @@ div .photo {
     margin-left: 15px;
 }
 
-.title-newList button {
+.title-newList p {
     width:max-content;
     padding: 5px 8px;
-    font-size: 42px;
+    font-size: 2rem;
 }
 
 #projectMembers {
@@ -89,13 +138,13 @@ div .photo {
     flex: 7;
     flex-direction: column;
     border: 1px solid black;
-    min-height: 90vh;
+    height: max-content;
     background-color: lightpink;
 }
 
 .title-projectMembers{
     border: 1px solid black;
-    min-height: 10vh;
+    height: max-content;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -110,7 +159,7 @@ div .photo {
 }
 
 .title-projectMembers p {
-    font-size: 80px;
+    font-size: 3rem;
     color:mediumblue;
     font-weight: bold;
 }
@@ -137,12 +186,13 @@ div .photo {
     flex-direction: column;
     justify-content: center;
     align-items: left;
+    font-size: 1.25rem;
     gap: 10px;
 }
 
 @media (max-width: 600px) {
     /* Styles for smaller screens */
     body {
-        font-size: 2vw;
-    }
+        font-size: 12px;
+    }
 }
